@@ -1,5 +1,3 @@
-require 'awesome_print'
-require 'httparty'
 class QualificationsController < ApplicationController
 
   def index
