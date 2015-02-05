@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qualification_name: MyString
+  subjects: MyString
+  color: MyString
+
+two:
+  qualification_name: MyString
+  subjects: MyString
+  color: MyString

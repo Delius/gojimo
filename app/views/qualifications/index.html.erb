@@ -1,0 +1,47 @@
+<div class="row">
+stored in db <br>
+<% @qualifications.each do |q| %>
+    <strong>Qualification name:</strong> <a href="#" id="show_whatever"><%= q.qualification_name %></a><br>
+    <div id="whatever" class="hidden">
+    <table>
+    <thead>
+    <tr>
+      <th width="70"></th>
+      <th width="220">Table Header</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td> <% q.color.each do |c| %><br>
+            <div style="background-color:<%= c %>"> Subj: </div>
+        <% end %></td>
+      <td> <% q.title.each do |t| %><br>
+            <div style="background-color:#F7F7F7"> <%= t %> </div>
+        <% end %></td>
+
+    </tr>
+
+    </tbody>
+  </table>
+        </div>
+<% end %>
+
+
+From json feed
+<ul>
+ <% @quals.each do |qual| %>
+
+
+     <strong>Qualification name:</strong> <a href="#" id="show_whatever"><%= qual['name'] %></a>
+       <% qual['subjects'].each do |subject| %>
+         <div id="whatever" class="hidden">
+           <div style="background-color:<%= subject['colour'] %>">Subject:    <%= subject['title'] %></div>
+
+         </div>
+
+       <% end %><br>
+  <% end %>
+
+</ul>
+</div>
